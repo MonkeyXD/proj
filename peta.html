@@ -11,13 +11,14 @@
    crossorigin=""></script>
 
     <style>
+		body {margin:0;}
     #mapid { height: 100vh; }
 	</style>
 </head>
 <body>
 	<div id="mapid"></div>
 	<script type="text/javascript">
-		var mymap = L.map('mapid').setView([-6.912848, 107.612749], 13);
+		var mymap = L.map('mapid').setView([-6.912848, 107.612749], 17);
 
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -28,5 +29,5 @@
 		var marker = L.marker([-7.043611, 107.536883]).addTo(mymap).bindPopup("<b>Ini rumah!</b>").openPopup();
 		var marker = L.marker([-6.948922, 107.638327]).addTo(mymap).bindPopup("<b>Ini aegislab!</b>").openPopup();
 	</script>
-</body>	
+</body>
 </html>
